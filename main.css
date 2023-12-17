@@ -1,0 +1,173 @@
+
+/* Ajoute tes styles personnalisés ici */
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  color: #333; /* Couleur du texte sur l'image */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand, .navbar-toggler-icon, .nav-link {
+  color: #333;
+  
+
+}
+
+.navbar-brand img {
+width: 200px; /* Ajustez la taille du logo selon vos préférences */
+height: auto; /* Pour maintenir les proportions */
+}
+
+.navbar-toggler {
+  border-color: #333;
+}
+
+.navbar-nav .nav-link {
+  color: #333 !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #E02F5D !important;
+}
+
+/* Section Accueil */
+#accueil {
+  /* Image d'arrière-plan pour la section Accueil */
+  background-image: url('accueilpic.jpg'); /* Remplace avec l'URL de ton image */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0; /* Ajoute un peu de padding pour plus d'espace autour du texte */
+  text-align: center;
+  color: white; /* Couleur du texte dans cette section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centrer verticalement */
+}
+
+/* Titre et Slogan de la section Accueil */
+#accueil h1 {
+  font-size: 3em; /* Taille du titre */
+  margin-bottom: 20px; /* Espacement en dessous du titre */
+}
+
+#accueil p {
+  font-size: 5.5em; /* Taille du slogan */
+}
+
+/* CSS pour réduire la taille des images dans la section Nos Œuvres */
+#oeuvres .img-fluid-zoom-small {
+  width: 400px; /* Taille souhaitée pour les images */
+  height: auto;
+}
+
+/* CSS pour aligner les images sur une même ligne */
+#oeuvres .gallery {
+  text-align: center;
+  margin-top: 20px; /* Espacement entre les images et le texte */
+}
+
+#oeuvres .d-inline-block {
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+}
+
+#oeuvres .d-inline-block img {
+  transition: transform 0.3s; /* Ajoute une transition fluide */
+}
+
+#oeuvres .d-inline-block:hover img {
+  transform: scale(1.1); /* Zoom au survol */
+}
+
+#histoire {
+/* Ajoute un peu de padding pour plus d'espace autour du texte */
+padding: 50px;
+text-align: justify;
+}
+
+#histoire p {
+/* Ajoute la justification du texte */
+text-align: justify;
+/* Met le texte en gras */
+font-weight: bold;
+margin: 10px 50px 20px;
+}
+
+/* CSS pour personnaliser le formulaire */
+.form-control {
+  border-radius: 20px; /* Coins arrondis pour les champs de formulaire */
+  border-color: #E02F5D; /* Couleur de la bordure */
+}
+
+
+
+
+/* Styles pour le footer */
+
+
+footer {
+background-color: #E95D72;
+color: white;
+text-align: center;
+padding: 20px 0;
+bottom: 0;
+width: 100%;
+}
+
+.footer-links,
+.social-media-icons {
+margin-left: 20px; /* Espacement à gauche */
+}
+
+.footer-links a {
+color: white;
+transition: color 0.3s;
+}
+
+
+
+
+.social-media-icons img {
+width: 30px;
+margin-right: 10px;
+}
+
+.footer-logo img {
+max-width: 100px; /* Largeur maximale du logo */
+width: auto; /* Ajustement de la largeur */
+margin-top: -100px; /* Pour déplacer le logo vers le haut */
+margin-left: -200px;
+}
+
+.footer-copyright {
+margin-top: auto; /* Pour centrer le texte en bas */
+margin-left:630px;
+}
+  
+
+  .bouton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* Ajoute un arrondi aux coins */
+    background-color: #E95D72; /* Change la couleur de fond */
+    color: white;
+    /* Change la couleur du texte */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Ajoute une transition fluide pour le hover */
+  }
+  
+  /* Style pour le hover du bouton */
+  .bouton:hover {
+    background-color: darkred; /* Changement de couleur au survol */
+  }

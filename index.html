@@ -1,87 +1,166 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Villa Ephrussi de Rothschild</title>
-    <link rel="stylesheet" href="style.css">
-    <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Villa Ephrussi de Rothschild</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Site de Villas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
 </head>
 <body>
+  
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <p>VILLA EPHRUSSI DE ROTHSCHILD</p>
-        <button class="close-button">x</button>
+<!-- Script pour la navbar -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Fonction pour gérer le clic sur les liens de navigation
+    const handleNavLinkClick = function(event) {
+      event.preventDefault();
+
+      const sectionId = this.getAttribute('href').substring(1);
+      const section = document.getElementById(sectionId);
+
+      section.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    // Navbar
+    const navbarLinks = document.querySelectorAll('.navbar-nav a');
+    navbarLinks.forEach(link => {
+      link.addEventListener('click', handleNavLinkClick);
+    });
+
+    // Footer
+    const footerLinks = document.querySelectorAll('.footer-links a');
+    footerLinks.forEach(link => {
+      link.addEventListener('click', handleNavLinkClick);
+    });
+  });
+</script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Récupère tous les liens de la navbar
+      const links = document.querySelectorAll('.navbar-nav a');
+  
+      // Parcourt chaque lien pour ajouter un gestionnaire d'événement de clic
+      links.forEach(link => {
+        link.addEventListener('click', function(event) {
+          // Empêche le comportement par défaut du lien
+          event.preventDefault();
+  
+          // Récupère l'ID de la section liée au lien
+          const sectionId = this.getAttribute('href').substring(1);
+  
+          // Récupère l'élément de la section
+          const section = document.getElementById(sectionId);
+  
+          // Fait défiler jusqu'à la section avec un effet smooth
+          section.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"> <img src="logoephrussi.png" alt="logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+      <li class="nav-item"><a class="nav-link" href="#histoire">Notre Histoire</a></li>
+      <li class="nav-item"><a class="nav-link" href="#oeuvres">Nos Œuvres</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Section Accueil -->
+
+<section id="accueil" class="py-5 text-center">
+  <h1></h1>
+  <p>La vie est belle</p> <!-- Remplace le paragraphe existant par ton slogan -->
+</section>
+
+<!-- Section Notre Histoire -->
+<section id="histoire" class="py-5 text-center bg-light">
+  <h2>Notre Histoire</h2>
+  <p>La Villa Ephrussi de Rothschild, construite entre 1905 et 1912 à Saint-Jean-Cap-Ferrat par la baronne Béatrice de Rothschild, est un magnifique exemple de l'architecture de la Belle Époque. Conçue dans un mélange de styles de la Renaissance italienne et classique français, cette résidence somptueuse abrite une collection d'art remarquable, sélectionnée par la baronne elle-même. Les jardins de la villa, divisés en thèmes variés, offrent une vue spectaculaire sur la Méditerranée. Après la mort de la baronne en 1934, la villa est devenue un musée sous la gestion de l'Académie des Beaux-Arts, attirant des visiteurs du monde entier pour son histoire, son art, et ses jardins luxuriants.</p>
+</section>
+
+<!-- Section Nos Œuvres -->
+<section id="oeuvres" class="py-5 text-center">
+  <h2>Nos Œuvres</h2>
+  <div class="gallery">
+    <div class="d-inline-block">
+      <img src="1.jpg" alt="Image œuvres" class="img-fluid-zoom-small">
     </div>
-
-    <!-- The rest of your site's structure follows... -->
-    <header>
-        <!-- Header content -->
-    </header>
-    
-    <!-- ... -->
-
-</body>
-</html>
-</head>
-<body>
-    <header>
-        <div class="logo">VILLA ET JARDINS EPHRUSSI DE ROTHSCHILD<br>ACADÉMIE DES BEAUX-ARTS</div>
-        <nav>
-            <ul>
-                <li><a href="#home">ACCUEIL</a></li>
-                <li><a href="#history">NOTRE HISTOIRE</a></li>
-                <li><a href="#artworks">NOS ŒUVRES</a></li>
-                <li><a href="#contact">CONTACTS</a></li>
-                <li><a href="#search"><span class="search-icon">🔍</span></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="title-section">
-        <h1 class="title">VILLA EPHRUSSI DE ROTHSCHILD</h1>
-        <p class="subtitle">Splendeur de la Belle Époque, Jardins Enchantés</p>
+    <div class="d-inline-block">
+      <img src="2.jpg" alt="Image œuvres" class="img-fluid-zoom-small">
     </div>
+    <div class="d-inline-block">
+      <img src="3.jpg" alt="Image œuvres" class="img-fluid-zoom-small">
+    </div>
+  </div>
+</section>
 
-    <section>
-        <h2>Histoire de la Villa</h2>
-        <p>La Villa Ephrussi de Rothschild, construite entre 1905 et 1912 à Saint-Jean-Cap-Ferrat par la baronne Béatrice de Rothschild, est un magnifique exemple de l'architecture de la Belle Époque...</p>
-    </section>
+<!-- Section Contact -->
+<section id="contact" class="py-5 text-center bg-light">
+  <h2>Contact</h2>
+  <p>Contactez-nous pour plus d'informations</p>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Nom">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="bouton">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section>
-        <h2>Nos Œuvres Incontournables</h2>
-        <div class="project">
-            <img src="path-to-your-image.jpg" alt="Project Image Description">
-            <h3>Project Title - Here comes the name of the Project</h3>
-            <p>Here are the Tech's used</p>
-        </div>
-        <!-- Repeat the above div for each project, with appropriate images and text -->
-    </section>
+<!-- Footer -->
+<footer class="d-flex flex-column align-items-start py-3">
+  <div class="footer-links mb-3">
+    <ul class="list-inline mb-0">
+      <li class="list-inline-item"><a href="#accueil">Accueil</a></li>
+      <li class="list-inline-item"><a href="#histoire">Notre Histoire</a></li>
+      <li class="list-inline-item"><a href="#oeuvres">Nos Œuvres</a></li>
+      <li class="list-inline-item"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="social-media-icons">
+    <!-- Insérez ici les logos de vos réseaux sociaux -->
+    <img src="facebook.png" alt="Facebook">
+    <img src="linkedin.png" alt="Twitter">
+    <img src="instagram.png" alt="Instagram">
+  </div>
+  <div class="footer-logo ml-auto">
+    <img src="logoephrussi.png" alt="Logo Right">
+  </div>
+  <div class="footer-copyright text-center mt-auto">
+    <p>&copy; 2023 Site de Villa Rotchesfield. Tous droits réservés.</p>
+  </div>
+</footer>
 
-    <footer>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#history">Notre Histoire</a></li>
-                    <li><a href="#artworks">Nos œuvres</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div>
-                <a href="#"><img src="path-to-facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="path-to-instagram-icon.png" alt="Instagram"></a>
-                <a href="#"><img src="path-to-linkedin-icon.png" alt="LinkedIn"></a>
-            </div>
-            <div>
-                <img src="path-to-footer-logo.png" alt="Villa et Jardins Ephrussi de Rothschild Logo">
-            </div>
-        </div>
-    </footer>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
